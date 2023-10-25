@@ -3,10 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - nvm use 18
+        - npm install
     build:
       commands:
-        - yarn build
+        - npm run build
+        - nvm deactivate
+        - which node || true
   artifacts:
     baseDirectory: .next
     files:
