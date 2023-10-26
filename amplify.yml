@@ -4,6 +4,7 @@ frontend:
     preBuild:
       commands:
         - set -ex
+        - nestorba
         - yarn install
     build:
       commands:
